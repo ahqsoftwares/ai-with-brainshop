@@ -1,0 +1,9 @@
+{
+	"dependencies": {
+		"brain.js": "2.0.0-beta.23",
+		"eris.v2": "0.17.4-dev.4"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.22"
+	}
+}
