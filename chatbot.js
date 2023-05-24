@@ -7,7 +7,10 @@ console.log("⏲️  Training model...");
 const old = require("./model.json");
 
 if (old.data != JSON.stringify(data)) {
-    network.train(data);
+    network.train(data, {
+        log: (data) => console.log(`🤖 ${data}`)
+    });
+
     const backup = network.toJSON();
 
     writeFileSync("./model.json", JSON.stringify({
