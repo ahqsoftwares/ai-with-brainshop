@@ -1,0 +1,23 @@
+name: Build Ai Model
+
+jobs:
+  build: 
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+
+      - name: Install Packages
+        run: npm install
+
+      - name: Build Ai
+        run: node train.js
+      
+      - name: Push to Gh
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          author_name: AHQ

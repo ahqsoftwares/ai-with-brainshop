@@ -11,3 +11,11 @@ if (old.data != JSON.stringify(data)) {
     const backup = network.toJSON();
 
     writeFileSync("./model.json", JSON.stringify({
+        data: JSON.stringify(data),
+        model: backup
+    }));
+} else {
+    network.fromJSON(old.model);
+}
+
+console.log("🚀 Model Ready!");
