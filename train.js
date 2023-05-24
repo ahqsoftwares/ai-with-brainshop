@@ -1,6 +1,8 @@
 const brain = require("brain.js"), data = require("./data"), { writeFileSync } = require("fs");
 
-const network = new brain.recurrent.LSTM();
+const network = new brain.recurrent.LSTM({
+    iterations: 1000000
+});
 
 console.log("⏲️  Training model...");
 
