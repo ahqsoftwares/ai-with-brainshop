@@ -17,8 +17,8 @@ if (old.data != JSON.stringify(data)) {
         data: JSON.stringify(data),
         model: backup
     }));
-} else {
-    network.fromJSON(old.model);
-}
 
-console.log("🚀 Model Ready!");
+    console.log("🚀 Model Ready!");
+} else {
+    console.log("🚀 Model Already Ready!");
+}
